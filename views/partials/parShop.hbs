@@ -1,6 +1,10 @@
 <div class="card" style="width: 33.333%;">
-  <img class="card-img-top" src="{{this.photo}}" alt="Card image cap">
+  <img class="img-fluid img-thumbnail" src="{{this.photo}}" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">{{this.name}}<br>{{this.type}}<br>{{this.location}}<br>{{this.contact}}</h5>
+    <h5 class="card-title">{{this.name}}<br>
+                     Type: {{this.type}}<br>
+                     Location: {{this.location.city}}<br>
+                     Contact: {{this.contact.email}}<br>
+                     {{this.contact.website}}</h5>
   </div>
 </div>

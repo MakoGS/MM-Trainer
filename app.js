@@ -11,11 +11,14 @@ const expressSession = require('express-session');
 const MongoStore = require('connect-mongo')(expressSession);
 const mongoose = require('mongoose');
 const passport = require('passport');
+const hbs     = require('hbs');
 
 const indexRouter = require('./routes/index');
 const authRouter = require('./routes/auth');
-
+const shopRouter = require('./routes/shop');
 const app = express();
+
+hbs.registerPartials(__dirname + '/views/partials');
 
 // Setup view engine
 app.set('views', join(__dirname, 'views'));
@@ -57,7 +60,7 @@ app.use((req, res, next) => {
 
 app.use('/', indexRouter);
 app.use('/', authRouter);
-
+app.use('/', shopRouter);
 // Catch missing routes and forward to error handler
 app.use((req, res, next) => {
   next(createError(404));

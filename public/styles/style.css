@@ -13,9 +13,12 @@ a {
   }
   
   .cards-container img {
-    object-fit: cover;
+    display: block;
+    object-fit: cover; 
     object-position: center;
-    height: 100px;
+    align-content: center;
+    height: 150px;
+    width: 150px;
   }
 
 /*# sourceMappingURL=style.css.map */

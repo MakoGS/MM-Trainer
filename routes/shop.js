@@ -2,20 +2,13 @@
 
 const { Router } = require('express');
 const router = Router();
-const path    = require('path');
 
-router.set('view engine', 'hbs');
-router.set('views', path.join(__dirname, 'views'));
-
-router.registerPartials(__dirname + '/views/partials');
-
-router.use(Router.static(path.join(__dirname, 'public')));
 
 const shops=[
   {
     'name': 'Prozis',
     'location': {address:'Rua A', city:'Porto'},
-    'type': 'Sports Nutrition',
+    'type':'Sports Nutrition',
     'contact': {email: 'geral@prozis.pt', phone:'00351', website:'www.prozis.pt'},
     'photo': 'https://varzim.pt/site/wp-content/uploads/2016/07/prozis.jpg'
   },
@@ -42,11 +35,3 @@ router.get('/shops/:shopsId', (req, res, next) => {
 
 module.exports = router;
 
-
-
-
-/* 
-/GET "/shops"
-/POST "/shops"
-/GET "/shops/:id" 
-*/
