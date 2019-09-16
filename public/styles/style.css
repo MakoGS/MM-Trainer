@@ -6,4 +6,16 @@ body {
 a {
   color: #00b7ff; }
 
+  .cards-container {
+    display: flex;
+    padding: 10% 10%;
+    justify-content: space-around;
+  }
+  
+  .cards-container img {
+    object-fit: cover;
+    object-position: center;
+    height: 100px;
+  }
+
 /*# sourceMappingURL=style.css.map */
