@@ -64,6 +64,7 @@ app.use('/', indexRouter);
 app.use('/', authRouter);
 app.use('/', shopRouter);
 app.use('/', userRouter);
+
 // Catch missing routes and forward to error handler
 app.use((req, res, next) => {
   next(createError(404));

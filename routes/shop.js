@@ -25,15 +25,7 @@ router.get('/shops', (req, res, next) => {
   res.render('shop', {shops});
 });
 
-// router.get('/shops', (req, res, next) => {
-//   Shop.find({})
-//   .then(shops=>{
-//     res.render('shop', shops);
-//   })
-//   .catch(error=>{
-//     console.log('Error loading shops');
-//   });
-// });
+
 
 
 module.exports = router;
