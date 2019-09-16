@@ -2,7 +2,6 @@
 
 const { Router } = require('express');
 const router = Router();
-// const Shop= require('./../models/shop');
 
 const shops=[
   {
