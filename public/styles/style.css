@@ -13,12 +13,11 @@ a {
   }
   
   .cards-container img {
-    display: block;
-    object-fit: cover; 
-    object-position: center;
-    align-content: center;
-    height: 150px;
-    width: 150px;
+    display: flex;
+    margin:auto;
+    border-style: none;
+    height: 80%;
+    width: 100%;
   }
 
 /*# sourceMappingURL=style.css.map */

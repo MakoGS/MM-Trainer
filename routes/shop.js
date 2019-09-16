@@ -2,7 +2,7 @@
 
 const { Router } = require('express');
 const router = Router();
-
+// const Shop= require('./../models/shop');
 
 const shops=[
   {
@@ -25,13 +25,16 @@ router.get('/shops', (req, res, next) => {
   res.render('shop', {shops});
 });
 
-router.post('/shops', (req, res, next) => {
-  res.render('');
-});
+// router.get('/shops', (req, res, next) => {
+//   Shop.find({})
+//   .then(shops=>{
+//     res.render('shop', shops);
+//   })
+//   .catch(error=>{
+//     console.log('Error loading shops');
+//   });
+// });
 
-router.get('/shops/:shopsId', (req, res, next) => {
-  res.send(req.params);
-});
 
 module.exports = router;
 
