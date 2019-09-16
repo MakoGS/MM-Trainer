@@ -17,6 +17,9 @@ const indexRouter = require('./routes/index');
 const authRouter = require('./routes/auth');
 const shopRouter = require('./routes/shop');
 const userRouter = require('./routes/user');
+const adminUsersRouter = require('./routes/admin/users');
+const adminShopsRouter = require('./routes/admin/shops');
+const adminPtRouter = require('./routes/admin/pt');
 const app = express();
 
 hbs.registerPartials(__dirname + '/views/partials');
@@ -64,6 +67,10 @@ app.use('/', indexRouter);
 app.use('/', authRouter);
 app.use('/', shopRouter);
 app.use('/', userRouter);
+app.use('/admin', adminPtRouter);
+app.use('/admin', adminShopsRouter);
+app.use('/admin', adminUsersRouter);
+
 // Catch missing routes and forward to error handler
 app.use((req, res, next) => {
   next(createError(404));
