@@ -10,4 +10,27 @@ router.get('/user', (req, res, next) => {
   .catch(err => console.log(err));
 });
 
+router.get('/user/edit', (req, res, next) => {
+  User.findById(req.user._id)
+  .then(user => res.render('userEdit', { user }))
+  .catch(err => console.log(err));
+});
+
+router.post('/user/edit', (req, res, next) => {
+  User.update({
+    name: req.body.name,  
+    dateOfBirth: req.body.dateOfBirth,
+    genre: req.body.genre,
+    skills: req.body.skills,
+    description: req.body.description,
+    location: req.body.location,
+    role: req.body.role
+  })
+  .then(user => {
+    res.render('userEdit', { user });
+    res.redirect('/user')
+  })
+  .catch(err => console.log(err));
+});
+
 module.exports = router;
