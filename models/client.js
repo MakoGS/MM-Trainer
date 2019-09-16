@@ -32,7 +32,7 @@ const schema = new mongoose.Schema({
     type: String,
     required: true,
     lowercase: true,
-    enum: [ 'nutrition', 'loose weight', 'increase strength', 'hypertrophy', 'performance', 'rehab', 'cutting' ],
+    enum: [ 'nutrition', 'loseWeight', 'increaseStrength', 'hypertrophy', 'performance', 'rehab', 'cutting' ],
     unique: true
   },
   description: {
@@ -51,7 +51,6 @@ const schema = new mongoose.Schema({
   },
   image: {
     type: String,
-    required: true,
     lowercase: true,
     trim: true,
     unique: true
@@ -69,11 +68,11 @@ const schema = new mongoose.Schema({
 });
 
 //---THIS CONFIGURATION WILL BE ENABLED AFTER CONFIGURATING PASSPORT
-// const signInStatic = require('./user-sign-in-static');
-// const signUpStatic = require('./user-sign-up-static');
+const logInStatic = require('./statics/login-static');
+const signUpStatic = require('./statics/sign-up-static');
 
-// schema.statics.signIn = signInStatic;
-// schema.statics.signUp = signUpStatic;
+schema.statics.logIn = logInStatic;
+schema.statics.signUp = signUpStatic;
 
 const Client = mongoose.model('Client', schema);
 

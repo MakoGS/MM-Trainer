@@ -1,7 +1,6 @@
 'use strict';
 const passport = require('passport');
 const PassportLocalStrategy = require('passport-local').Strategy;
-
 const User = require('./models/user');
 
 passport.serializeUser((user, callback) => {
@@ -22,8 +21,8 @@ passport.deserializeUser((id, callback) => {
     });
 });
 
-passport.use('sign-in', new PassportLocalStrategy({ usernameField: 'email' }, (email, password, callback) => {
-  User.signIn(email, password)
+passport.use('login', new PassportLocalStrategy({ usernameField: 'email' }, (email, password, callback) => {
+  User.logIn(email, password)
     .then(user => {
       callback(null, user);
     })
@@ -32,8 +31,19 @@ passport.use('sign-in', new PassportLocalStrategy({ usernameField: 'email' }, (e
     });
 }));
 
-passport.use('sign-up', new PassportLocalStrategy({ usernameField: 'email' }, (email, password, callback) => {
-  User.signUp(email, password)
+passport.use('sign-up', new PassportLocalStrategy({ usernameField: 'email', passReqToCallback: true }, (req, email, password, callback) => {
+  User.signUp(
+    email,
+    password,
+    req.body.name,
+    req.body.dateOfBirth,
+    req.body.genre,
+    req.body.skills,
+    req.body.description,
+    req.body.location,
+    req.body.image,
+    req.body.role
+  )
     .then(user => {
       callback(null, user);
     })

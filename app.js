@@ -13,7 +13,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/user');
+const authRouter = require('./routes/auth');
 
 const app = express();
 
@@ -56,7 +56,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/', indexRouter);
-app.use('/user', usersRouter);
+app.use('/', authRouter);
 
 // Catch missing routes and forward to error handler
 app.use((req, res, next) => {
