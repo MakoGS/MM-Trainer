@@ -7,6 +7,10 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const sassMiddleware = require('node-sass-middleware');
 const serveFavicon = require('serve-favicon');
+const expressSession = require('express-session');
+const MongoStore = require('connect-mongo')(expressSession);
+const mongoose = require('mongoose');
+const passport = require('passport');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/user');
@@ -29,6 +33,27 @@ app.use(sassMiddleware({
   outputStyle: process.env.NODE_ENV === 'development' ? 'nested' : 'compressed',
   sourceMap: true
 }));
+app.use(expressSession({
+  secret: process.env.SESSION_SECRET,
+  cookie: { maxAge: 60 * 60 * 24 * 1000 },
+  resave: true,
+  saveUninitialized: false,
+  store: new MongoStore({
+    mongooseConnection: mongoose.connection,
+    ttl: 24 * 60 * 60
+  })
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Custom piece of middleware
+app.use((req, res, next) => {
+  // Access user information from within my templates
+  res.locals.user = req.user;
+  // Keep going to the next middleware or route handler
+  next();
+});
 
 app.use('/', indexRouter);
 app.use('/user', usersRouter);
