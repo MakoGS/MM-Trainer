@@ -10,19 +10,41 @@ const schema = new mongoose.Schema({
     unique: true
   },
   location: {
-    address: String,
-    city: String,
+    address: {
+      type:String,
+      lowercase:true,
+      trim:true
+    },
+    city: {
+      type: String,
+      lowercase: true,
+      trim: true
+    },
     required: true
   },
   type:{
     type: String,
     enum: ['Health/Nature Shop', 'Sports Nutrition', 'Meal prepared delivery'],
-    required: true
+    required: true,
+    trim: true,
+    lowercase:true
   },
   contact:{
-    email: String,
-    phone: String,
-    website: String,
+    email: {
+      type:String,
+      lowercase:true,
+      trim: true
+    },
+    phone: {
+      type:String,
+      trim:true,
+      lowercase:true
+    },
+    website: {
+      type: String,
+      trim:true,
+      lowercase:true
+    },
     required: true
     }
 });
