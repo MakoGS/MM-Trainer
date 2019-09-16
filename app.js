@@ -44,6 +44,7 @@ app.use(expressSession({
   })
 }));
 
+require('./passport-config');
 app.use(passport.initialize());
 app.use(passport.session());
 
