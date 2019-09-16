@@ -14,7 +14,8 @@ module.exports = function(
   image, 
   role
 ) {
-  const Model = this;
+  
+  const Model = this; 
 
   return bcrypt.hash(password, 10)
     .then(hash => {

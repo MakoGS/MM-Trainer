@@ -24,36 +24,32 @@ const schema = new mongoose.Schema({
   genre: {
     type: String,
     required: true,
-    lowercase: true,    
-    unique: true,
+    lowercase: true,
     enum: [ 'female', 'male' ]
   },
-  skills: {
-    type: String,
+  skills: {    
+    type: [String],
     required: true,
     lowercase: true,
-    enum: [ 'nutrition', 'loseWeight', 'increaseStrength', 'hypertrophy', 'performance', 'rehab', 'cutting' ],
-    unique: true
+    sparse: true,
+    enum: [ 'nutrition', 'lose weight', 'increase strength', 'hypertrophy', 'performance', 'rehab', 'cutting' ]
   },
   description: {
     type: String,
     required: true,
     lowercase: true,
-    trim: true,
-    unique: true
+    trim: true    
   },
   location: {
     type: String,
     required: true,
     lowercase: true,
-    trim: true,
-    unique: true
+    trim: true,    
   },
   image: {
     type: String,
     lowercase: true,
-    trim: true,
-    unique: true
+    trim: true,    
   },
   role: {
     type: String,

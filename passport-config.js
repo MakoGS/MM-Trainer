@@ -1,14 +1,14 @@
 'use strict';
 const passport = require('passport');
 const PassportLocalStrategy = require('passport-local').Strategy;
-const User = require('./models/user');
+const Client = require('./models/client');
 
 passport.serializeUser((user, callback) => {
   callback(null, user._id);
 });
 
 passport.deserializeUser((id, callback) => {
-  User.findById(id)
+  Client.findById(id)
     .then(user => {
       if (!user) {
         callback(new Error('MISSING_USER'));
@@ -22,7 +22,7 @@ passport.deserializeUser((id, callback) => {
 });
 
 passport.use('login', new PassportLocalStrategy({ usernameField: 'email' }, (email, password, callback) => {
-  User.logIn(email, password)
+  Client.logIn(email, password)
     .then(user => {
       callback(null, user);
     })
@@ -32,7 +32,8 @@ passport.use('login', new PassportLocalStrategy({ usernameField: 'email' }, (ema
 }));
 
 passport.use('sign-up', new PassportLocalStrategy({ usernameField: 'email', passReqToCallback: true }, (req, email, password, callback) => {
-  User.signUp(
+  console.log('sign up testing')
+  Client.signUp(
     email,
     password,
     req.body.name,
