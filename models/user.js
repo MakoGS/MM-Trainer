@@ -70,6 +70,6 @@ const signUpStatic = require('./statics/sign-up-static');
 schema.statics.logIn = logInStatic;
 schema.statics.signUp = signUpStatic;
 
-const Client = mongoose.model('Client', schema);
+const User = mongoose.model('User', schema);
 
-module.exports = Client;
+module.exports = User;
