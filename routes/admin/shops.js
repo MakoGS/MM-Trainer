@@ -31,7 +31,7 @@ router.post('/shops/add',upload.single('image'),(req, res, next) => {
       phone: req.body.phone,
       website: req.body.website
       },
-      image: req.body.image
+      image: req.file.url
       })
     .then(allShops => res.redirect('/admin/shops'))
     .catch(error => console.log('There was an error adding a shop', error))
