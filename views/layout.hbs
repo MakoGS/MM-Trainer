@@ -13,7 +13,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fluid">
+    
+    {{#if user}}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">M&M Trainer</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
           aria-expanded="false" aria-label="Toggle navigation">
@@ -22,22 +24,29 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
 
-          <a class="nav-item nav-link active" href="/">Home
-            <span class="sr-only">(current)</span>
-          </a>
+          {{#if client}}
           <a class="nav-item nav-link" href="/search-pt">Personal Trainers</a>
-          <a class="nav-item nav-link" href="/sign-up">Sign Up</a>
-          <a class="nav-item nav-link" href="/login">Login</a>
           <a class="nav-item nav-link" href="/shops">Shops</a>
-          <a class="nav-item nav-link" href="/logout">Logout</a>
           <a class="nav-item nav-link" href="/user">My profile</a>
+          <a class="nav-item nav-link" href="/logout">Logout</a>
+          {{/if}}
+
+          {{#if pt}}
+          <a class="nav-item nav-link" href="/shops">Shops</a>
+          <a class="nav-item nav-link" href="/user">My profile</a>
+          <a class="nav-item nav-link" href="/logout">Logout</a>
+          {{/if}}
+
+          {{#if admin}}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
             <div class="dropdown-menu dropdown-menu-left">
               <a class="dropdown-item" href="/admin/users">Users</a>
               <a class="dropdown-item" href="/admin/pt">Personal Trainer</a>
               <a class="dropdown-item" href="/admin/shops">Shops</a>
-        </li>
+        </li>                  
+          {{/if}}
+          {{/if}}
         </div>   
       </div>
     </nav>

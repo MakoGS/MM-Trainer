@@ -44,12 +44,12 @@ const schema = new mongoose.Schema({
     type: String,
     required: true,
     lowercase: true,
-    trim: true,    
+    trim: true  
   },
   image: {
     type: String,
     lowercase: true,
-    trim: true,    
+    trim: true 
   },
   role: {
     type: String,
