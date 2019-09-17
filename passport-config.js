@@ -32,7 +32,6 @@ passport.use('login', new PassportLocalStrategy({ usernameField: 'email' }, (ema
 }));
 
 passport.use('sign-up', new PassportLocalStrategy({ usernameField: 'email', passReqToCallback: true }, (req, email, password, callback) => {
-  console.log('sign up testing')
   User.signUp(
     email,
     password,
