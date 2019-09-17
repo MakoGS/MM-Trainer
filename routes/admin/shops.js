@@ -5,11 +5,6 @@ const router = Router();
 const Shop = require('./../../models/shop');
 const upload = require('./../../tools/cloudinary');
 
-/* router.get('/shops', (req, res, next) => {
-  res.render('admin/shops', {shops});  //view
-});
- */
-
 router.get('/shops', (req, res, next) => {
   Shop.find({})
   .then(allShops => {
@@ -37,16 +32,4 @@ router.post('/shops/add',upload.single('image'),(req, res, next) => {
     .catch(error => console.log('There was an error adding a shop', error))
 });
 
-// router.post('/shops/delete/:shopID', (req, res, next) => {
-//   Shop.findByIdAndDelete(req.params.shopID)
-//   .then(shop => {
-//     console.log( `${shop} was deleted.`);
-//     res.redirect('/');
-// })
-//   .catch(err => console.log(err));
-// });
-
 module.exports = router;
-/* 
-/GET "/admin/shops
- */
