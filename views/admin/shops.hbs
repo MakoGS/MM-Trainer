@@ -1,1 +1,59 @@
 <h1> Admin Shop</h1>
+<div class="form">
+  <form method="POST" action="/admin/shops/add">
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Shop name">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputState">Type</label>
+          <select name="type" class="form-control">
+            <option value="Health/Nature Shop">Health/Nature Shop</option>
+            <option value="Sports Nutrition">Sports Nutrition</option>
+            <option value="Meal prepared delivery">Meal prepared delivery</option>
+          </select> 
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-2">
+        <label for="inputState">City</label>
+        <select name="city" class="form-control">
+          <option value="Porto">Porto</option>
+          <option value="Lisbon">Lisbon</option>
+          <option value="Algarve">Algarve</option>
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" name="address" placeholder="Address">
+      </div>
+    </div>
+    Contact:
+    <div class="form-row">
+      <div class="form-group col-md-2">
+        <input type="email" class="form-control" name="email" placeholder="E-mail">
+      </div>
+      <div class="form-group col-md-2">
+        <input type="text" class="form-control" name="phone" placeholder="Phone">
+      </div>
+      <div class="form-group col-md-2">
+        <input type="text" class="form-control" name="website" placeholder="Website">
+      </div>
+    </div>
+    <div>
+      <label for="sign-up-image">Profile Image</label>
+      <input type="file" name="image" placeholder="Add your profile image">
+      <button class="btn btn-primary">Create Store</button>
+    </div>
+  </form>
+</div>
+
+<div class="list">
+  <div class="cards-container">
+    {{#each allShops}}
+      {{> parShop this}}
+    {{/each}}
+  </div>
+</div>
+

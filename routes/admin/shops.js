@@ -3,6 +3,7 @@
 const { Router } = require('express');
 const router = Router();
 const Shop = require('./../../models/shop');
+const upload = require('./../../tools/cloudinary');
 
 /* router.get('/shops', (req, res, next) => {
   res.render('admin/shops', {shops});  //view
@@ -17,7 +18,7 @@ router.get('/shops', (req, res, next) => {
   .catch(err => console.log(err));
 });
 
-router.post('/shops/add', (req, res, next) => {
+router.post('/shops/add',upload.single('image'),(req, res, next) => {
   Shop.create({
       name: req.body.name,
       location: {
@@ -28,10 +29,11 @@ router.post('/shops/add', (req, res, next) => {
       contact: {
       email: req.body.email,
       phone: req.body.phone,
-      website: req.body.website 
-      }     
+      website: req.body.website
+      },
+      image: req.body.image
       })
-    .then(allShops => res.redirect('admin/shops'))
+    .then(allShops => res.redirect('/admin/shops'))
     .catch(error => console.log('There was an error adding a shop', error))
 });
 

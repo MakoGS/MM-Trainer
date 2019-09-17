@@ -25,8 +25,7 @@ const schema = new mongoose.Schema({
     type: String,
     enum: ['Health/Nature Shop', 'Sports Nutrition', 'Meal prepared delivery'],
     required: true,
-    trim: true,
-    lowercase:true
+    trim: true
   },
   contact:{
     email: {
@@ -44,6 +43,11 @@ const schema = new mongoose.Schema({
       trim:true,
       lowercase:true
     }
+    },
+    image: {
+      type: String,
+      lowercase: true,
+      trim: true    
     }
 });
 

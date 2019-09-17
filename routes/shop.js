@@ -2,6 +2,7 @@
 
 const { Router } = require('express');
 const router = Router();
+// const passport = require('passport');
 
 const shops=[
   {
@@ -21,8 +22,9 @@ const shops=[
 ];
 
 router.get('/shops', (req, res, next) => {
-  res.render('shop', {shops});
+  res.render('shops');
 });
+
 
 
 
