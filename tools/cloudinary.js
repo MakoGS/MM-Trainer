@@ -13,11 +13,10 @@ cloudinary.config({
 
 const storage = cloudinaryStorage({
   cloudinary,
-  folder: '/node-file-tumblr',
+  folder: 'project2',
   allowedFormats: [ 'jpg', 'png' ]
 });
 
 const upload = multer({ storage });
-
 
 module.exports = upload;
