@@ -7,8 +7,8 @@ const User = require('./../models/user');
 router.get('/search-pt', (req, res, next) => {
   User.find({
     role: 'personalTrainer',
-    skills: {$regex : `${ req.user.skills }`},
-    location: req.user.location
+    skills: {$regex : `${ req.session.user.skills }`},
+    location: req.session.user.location
   })
   .then(pts => {
     res.render('pt', { pts } );

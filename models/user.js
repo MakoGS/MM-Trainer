@@ -54,8 +54,7 @@ const schema = new mongoose.Schema({
   role: {
     type: String,
     required: true,
-    enum: [ 'client', 'personalTrainer', 'admin' ],
-    default: 'user'
+    enum: [ 'client', 'personalTrainer', 'admin' ]
   },
   passwordHash: {
     type: String,
