@@ -1,1 +1,16 @@
 <h1> Admin PT</h1>
+
+{{!-- search bar --}}
+<form method="GET" action="/admin/users/list">
+<div class="form">
+    <input type="search" id="ptName" name="ptName" placeholder="User" />
+      <button class="btn btn-primary">Search for a User!</button>
+      </div>
+      </form>
+
+
+{{#each pts}}
+<p>{{this.name}} </p>
+<form method="POST" action="pt/delete/{{this._id}}">
+  <button>Delete</button>
+{{/each}}
