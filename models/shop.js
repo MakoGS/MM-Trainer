@@ -19,8 +19,7 @@ const schema = new mongoose.Schema({
       type: String,
       lowercase: true,
       trim: true
-    },
-    required: true
+    }
   },
   type:{
     type: String,
@@ -44,8 +43,7 @@ const schema = new mongoose.Schema({
       type: String,
       trim:true,
       lowercase:true
-    },
-    required: true
+    }
     }
 });
 
