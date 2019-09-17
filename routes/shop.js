@@ -28,4 +28,3 @@ router.get('/shops', (req, res, next) => {
 
 
 module.exports = router;
-
