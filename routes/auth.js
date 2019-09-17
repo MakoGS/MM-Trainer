@@ -12,8 +12,8 @@ router.get('/sign-up', ensureLoggedOut(), (req, res, next) => {
 });
 
 router.post('/sign-up', ensureLoggedOut(), upload.single('image'), passport.authenticate('sign-up', {
-  successRedirect: "/",
-  failureRedirect: "/sign-up"
+  successRedirect: "/user",
+  failureRedirect: "/"
 }));
 
 router.get('/login', ensureLoggedOut(), (req, res, next) => {
@@ -21,11 +21,11 @@ router.get('/login', ensureLoggedOut(), (req, res, next) => {
 });
 
 router.post('/login', ensureLoggedOut(), passport.authenticate('login', {
-  successRedirect: "/",
-  failureRedirect: "/login"
+  successRedirect: "/user",
+  failureRedirect: "/user"
 }));
 
-router.get('/logout', ensureLoggedIn(), (req, res) => {
+router.get('/logout',ensureLoggedIn(), (req, res) => {
   req.logout();
   res.redirect('/');
 });

@@ -5,13 +5,13 @@ const router = Router();
 const User = require('./../models/user');
 
 router.get('/user', (req, res, next) => {
-  User.findById(req.session.user._id)
+  User.findById(req.user._id)
   .then(user => res.render('user', { user }))
   .catch(err => console.log(err));
 });
 
 router.get('/user/edit', (req, res, next) => {
-  User.findById(req.session.user._id)
+  User.findById(req.user._id)
   .then(user => res.render('userEdit', { user }))
   .catch(err => console.log(err));
 });

@@ -56,13 +56,14 @@ require('./passport-config');
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use((req, res, next) => {  
-  res.locals.user = req.session.user;  
-  req.session.user = req.session.user || {};
-    res.locals.client = (req.session.user.role === 'client');
-    res.locals.pt = (req.session.user.role === 'personalTrainer');
-    res.locals.admin = (req.session.user.role === 'admin');
-  
+
+app.use((req, res, next) => { 
+  // res.locals.user   = req.user;  
+  if (req.user) { 
+    res.locals.client = (req.user.role === 'client');
+    res.locals.pt     = (req.user.role === 'personalTrainer');
+    res.locals.admin  = (req.user.role === 'admin');
+  }
   next(); 
 });
 
