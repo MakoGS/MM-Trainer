@@ -2,4 +2,6 @@
 
 {{#each users}}
 <p>{{this.name}} </p>
+<form method="POST" action="users/delete/{{this._id}}">
+  <button>Delete</button>
 {{/each}}

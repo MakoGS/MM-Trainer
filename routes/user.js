@@ -33,4 +33,14 @@ router.post('/user/edit', (req, res, next) => {
   .catch(err => console.log(err));
 });
 
+router.post('/user/delete/', (req, res, next) => {
+  User.findByIdAndDelete(req.user._id)
+  .then(user => {
+    console.log( `${user} was deleted.`);
+    req.logout();
+    res.redirect('/');
+})
+  .catch(err => console.log(err));
+});
+
 module.exports = router;

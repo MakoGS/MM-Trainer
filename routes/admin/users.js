@@ -11,10 +11,12 @@ router.get('/users', (req, res, next) => {
   .catch(err => console.log(err));
 });
 
-router.post('/users/delete', (req, res, next) => {
-  
-  User.delete({})
-  .then(users => res.render('admin/users', {users} ))
+router.post('/users/delete/:userId', (req, res, next) => {
+  User.findByIdAndDelete(req.params.userId)
+  .then(user => {
+    console.log( `${user} was deleted.`);
+    res.redirect('/');
+})
   .catch(err => console.log(err));
 });
 
