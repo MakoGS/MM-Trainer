@@ -56,12 +56,14 @@ require('./passport-config');
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Custom piece of middleware
-app.use((req, res, next) => {
-  // Access user information from within my templates
-  res.locals.user = req.user;
-  // Keep going to the next middleware or route handler
-  next();
+app.use((req, res, next) => {  
+  res.locals.user = req.session.user;  
+  req.session.user = req.session.user || {};
+    res.locals.client = (req.session.user.role === 'client');
+    res.locals.pt = (req.session.user.role === 'personalTrainer');
+    res.locals.admin = (req.session.user.role === 'admin');
+  
+  next(); 
 });
 
 app.use('/', indexRouter);
