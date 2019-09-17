@@ -52,8 +52,21 @@
 <div class="list">
   <div class="cards-container">
     {{#each allShops}}
-      {{> parShop this}}
-      <button class="btn btn-primary">Create Store</button>
+    <div class="card" style="width: 33.333%;">
+      <a href="/admin/shops/edit/{{this._id}}">
+      <img class="img-fluid img-thumbnail" src="{{this.image}}" alt="Card image cap">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">{{this.name}}<br>
+                        Type: {{this.type}}<br>
+                        Location: {{this.location.city}}<br>
+                        Contact: {{this.contact.email}}<br>
+                        {{this.contact.website}}</h5>
+      </div>
+    </div>      
+    <form method="POST" action="shops/delete/{{this._id}}">
+        <button class="btn btn-primary">Remove Store</button>
+      </form>
     {{/each}}
   </div>
 </div>

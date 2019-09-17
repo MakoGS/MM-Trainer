@@ -12,11 +12,12 @@ a {
     justify-content: space-around;
   }
   
+ 
   .cards-container img {
     display: flex;
     margin:auto;
     border-style: none;
-    height: 80%;
+    height: 100%;
     width: 100%;
   }
 
