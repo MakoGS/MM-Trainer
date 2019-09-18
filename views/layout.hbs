@@ -4,50 +4,65 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>{{title}}</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> --}}
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/2b806b9c62.js"></script>
   </head>
   <body>
-    
-    {{#if user}}
-    <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="#">M&M Trainer</a>
+
+          {{#if client}}
+              <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="/">M&M Trainer</a>
 
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-
-          {{#if client}}
           <a class="nav-item nav-link" href="/search-pt">Personal Trainers</a>
           <a class="nav-item nav-link" href="/shops">Shops</a>
           <a class="nav-item nav-link" href="/user">My profile</a>
           <a class="nav-item nav-link" href="/logout">Logout</a>
+          
+        </div>   
+      </div>
+    </nav>
           {{/if}}
 
           {{#if pt}}
+              <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="/">M&M Trainer</a>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
           <a class="nav-item nav-link" href="/shops">Shops</a>
           <a class="nav-item nav-link" href="/user">My profile</a>
           <a class="nav-item nav-link" href="/logout">Logout</a>
+          
+        </div>   
+      </div>
+    </nav>
           {{/if}}
 
           {{#if admin}}
+              <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="/">M&M Trainer</a>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
             <div class="dropdown-menu dropdown-menu-left">
               <a class="dropdown-item" href="/admin/users">Users</a>
               <a class="dropdown-item" href="/admin/pt">Personal Trainer</a>
               <a class="dropdown-item" href="/admin/shops">Shops</a>
-        </li>                  
-          {{/if}}
-          {{/if}}
+        </li>
         </div>   
       </div>
-    </nav>
+    </nav>                  
+          {{/if}}
+              
     {{{body}}}
   </body>
 </html>
