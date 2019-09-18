@@ -9,116 +9,101 @@
       <div class="card-body">
 
         <form method="POST" action="/login" enctype="multipart/form-data">
-        <div class="form-group">
-          <div class="row">
+          <div class="form-group">
+            <div class="row">
 
-            <div class="col">
-              <input class="form-control" type="email" name="name" value={{user.name}}>
+              <div class="col">
+                <input class="form-control" type="email" name="name" value={{user.name}}>
               </div>
 
-                <div class="col">
-                  <div class="custom-file">
-                    <input type="file" class="custom-file-input" name="image">
-                    <label class="custom-file-label" for="customFile">Profile Image</label>
-                </div>
-                </div>
-
-                <div class="col">
-                  <input class="form-control" type="date" name="dateOfBirth" value={{user.dateOfBirth}}>
+              <div class="col">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" name="image">
+                  <label class="custom-file-label" for="customFile">Profile Image</label>
                 </div>
               </div>
 
               <div class="col">
-                <input class="form-control" type="date" name="dateOfBirth" placeholder="Date of birth">
+                <input class="form-control" type="date" name="dateOfBirth" value={{user.dateOfBirth}}>
               </div>
-
             </div>
-          </div>
 
-              <div class="form-group">
-                <div class="row">
-                                  <div class="col">
+          </div>
+      
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col">
             <select class="form-control" value={{user.genre}}>
               <option selected>-- Genre</option>
               <option name="genre" value="male">Male</option>
               <option name="genre" value="female">Female</option>
             </select>
-                </div>
-                <div class="col">
+          </div>
+          <div class="col">
             <select class="form-control" value={{user.location}}>
               <option selected>-- Choose location</option>
               <option name="location" value="lisboa">Lisboa</option>
               <option name="location" value="oporto">Oporto</option>
             </select>
-                </div>
-                <div class="col">
-                     <input class="form-control" type="email" name="email" value={{user.email}}>
-                </div>
-            
-              </div>
-              <div class="col">
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option selected>-- Choose location</option>
-                  <option name="location" value="lisboa">Lisboa</option>
-                  <option name="location" value="oporto">Oporto</option>
-                </select>
-              </div>
-              <div class="col">
-                <input class="form-control" type="email" name="email" placeholder="Email">
-              </div>
+          </div>
+          <div class="col">
+            <input class="form-control" type="email" name="email" value={{user.email}}>
+          </div>
 
-          <div class="form-group">
-            <div class="row">
-              <legend class="col-form-label col-sm-2">Skills / Interests:</legend>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="skills" value="Nutrition">
-                <label class="form-check-label">Nutrition</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" valuename="skills"="Lose weight">
-                <label class="form-check-label">Lose weight</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" valuename="skills"="Increase strength">
-                <label class="form-check-label">Increase strength</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="skills" value="Hypertrophy">
-                <label class="form-check-label">Hypertrophy</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="skills" value="Performance">
-                <label class="form-check-label">Performance</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="skills" value="Rehab">
-                <label class="form-check-label">Rehab</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="skills" value="Cutting">
-                <label class="form-check-label">Cutting</label>
-              </div>
+        </div>
+
+        <div class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-2">Skills / Interests:</legend>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="skills" value="Nutrition">
+              <label class="form-check-label">Nutrition</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" valuename="skills"="Lose weight">
+              <label class="form-check-label">Lose weight</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" valuename="skills"="Increase strength">
+              <label class="form-check-label">Increase strength</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="skills" value="Hypertrophy">
+              <label class="form-check-label">Hypertrophy</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="skills" value="Performance">
+              <label class="form-check-label">Performance</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="skills" value="Rehab">
+              <label class="form-check-label">Rehab</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="skills" value="Cutting">
+              <label class="form-check-label">Cutting</label>
             </div>
           </div>
-          <div class="form-group">            
-            <textarea class="form-control" name="description" rows="3" value={{user.description}}>
-            </textarea>
-          </div>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" name="description" rows="3">{{user.description}}</textarea>
+        </div>
 
-          <div class="form-group">
-            <div class="row">
+        <div class="form-group">
+          <div class="row">
             <div class="col">
-            <select class="form-control" value={{user.role}}>
-              <option selected>-- Type of user</option>
-              <option name="role" value="client">Client</option>
-              <option name="role" value="personalTrainer">Personal Trainer</option>
-            </select>
-                </div>
+              <select class="form-control" value={{user.role}}>
+                <option selected>-- Type of user</option>
+                <option name="role" value="client">Client</option>
+                <option name="role" value="personalTrainer">Personal Trainer</option>
+              </select>
+            </div>
           </div>
-          </div>
+        </div>
 
 
-          <button class="btn btn-lg btn-success btn-block">Edit profile</button>
+        <button class="btn btn-lg btn-success btn-block">Edit profile</button>
 
         </form>
 
