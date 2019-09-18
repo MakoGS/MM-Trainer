@@ -47,8 +47,7 @@ const schema = new mongoose.Schema({
     trim: true  
   },
   image: {
-    type: String,
-    lowercase: true,
+    type: String,    
     trim: true 
   },
   role: {

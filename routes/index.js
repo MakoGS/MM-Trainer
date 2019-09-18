@@ -2,9 +2,9 @@
 
 const { Router } = require('express');
 const router = Router();
+const {ensureLoggedOut} = require('connect-ensure-login');
 
-router.get('/', (req, res, next) => {
-  // console.log(req.user)
+router.get('/', ensureLoggedOut('/user'), (req, res, next) => {
   res.render('index', { title: 'Hello World!' });
 });
 

@@ -8,7 +8,7 @@ const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
 const upload = require('./../tools/cloudinary');
 
 router.get('/sign-up', ensureLoggedOut(), (req, res, next) => {
-  res.render('auth/sign-up');
+  res.render('sign-up');
 });
 
 router.post('/sign-up', ensureLoggedOut(), upload.single('image'), passport.authenticate('sign-up', {
@@ -22,7 +22,7 @@ router.get('/login', ensureLoggedOut(), (req, res, next) => {
 
 router.post('/login', ensureLoggedOut(), passport.authenticate('login', {
   successRedirect: "/user",
-  failureRedirect: "/user"
+  failureRedirect: "/"
 }));
 
 router.get('/logout',ensureLoggedIn(), (req, res) => {

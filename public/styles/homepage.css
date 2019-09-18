@@ -1,0 +1,23 @@
+body {
+  background-image: url("./../images/homepage-bn.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn {
+  color: #fff;
+  background-color: #6e9673;
+}
+
+a {
+color: #6e9673
+}
+
+.form { background-color: rgba(255, 255, 255, 0.8); }
+.description { color: #fff; }
