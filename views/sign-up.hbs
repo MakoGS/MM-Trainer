@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,66 +7,48 @@
   <link rel="stylesheet" href="/styles/homepage.css" />
   <title>Document</title>
 </head>
-
 <body>
-
-
   <div class="col-lg-10 align-self-center">
     <div class="card text-center form card-form">
       <div class="card-body">
-
         <form method="POST" action="/sign-up" enctype="multipart/form-data">
-        <div class="form-group">
-          <div class="row">
-
-            <div class="col">
-              <input class="form-control" type="email" name="name" placeholder="Full name">
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <input class="form-control" type="email" name="name" placeholder="Full name">
               </div>
-
-                <div class="col">
-                  <div class="custom-file">
-                    <input type="file" class="custom-file-input" name="image">
-                    <label class="custom-file-label" for="customFile">Profile Image</label>
+              <div class="col">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" name="image">
+                  <label class="custom-file-label" for="customFile">Profile Image</label>
                 </div>
-                </div>
-
-                <div class="col">
-                  <input class="form-control" type="date" name="dateOfBirth" placeholder="Date of birth">
-                </div>
-
               </div>
+              <div class="col">
+                <input class="form-control" type="date" name="dateOfBirth" placeholder="Date of birth">
               </div>
-
-
-              <div class="form-group">
-                <div class="row">
-                                  <div class="col">
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option selected>-- Genre</option>
-              <option name="genre" value="male">Male</option>
-              <option name="genre" value="female">Female</option>
-            </select>
-                </div>
-                <div class="col">
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option selected>-- Choose location</option>
-              <option name="location" value="lisboa">Lisboa</option>
-              <option name="location" value="oporto">Oporto</option>
-            </select>
-                </div>
-                <div class="col">
-                     <input class="form-control" type="email" name="email" placeholder="Email">
-                </div>
-            
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option selected>-- Genre</option>
+                  <option name="genre" value="male">Male</option>
+                  <option name="genre" value="female">Female</option>
+                </select>
               </div>
+              <div class="col">
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option selected>-- Choose location</option>
+                  <option name="location" value="lisboa">Lisboa</option>
+                  <option name="location" value="oporto">Oporto</option>
+                </select>
               </div>
-
-          
-          
-          
-
-
-
+              <div class="col">
+                <input class="form-control" type="email" name="email" placeholder="Email">
+              </div>
+            </div>
+          </div>
           <div class="form-group">
             <div class="row">
               <legend class="col-form-label col-sm-2">Skills / Interests:</legend>
@@ -76,11 +57,11 @@
                 <label class="form-check-label">Nutrition</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" valuename="skills" ="Lose weight">
+                <input class="form-check-input" type="checkbox" valuename="skills"="Lose weight">
                 <label class="form-check-label">Lose weight</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" valuename="skills" ="Increase strength">
+                <input class="form-check-input" type="checkbox" valuename="skills"="Increase strength">
                 <label class="form-check-label">Increase strength</label>
               </div>
               <div class="form-check form-check-inline">
@@ -101,38 +82,29 @@
               </div>
             </div>
           </div>
-          <div class="form-group">            
+          <div class="form-group">
             <textarea class="form-control" name="description" rows="3" placeholder="Profile description..."></textarea>
           </div>
-
           <div class="form-group">
             <div class="row">
-            <div class="col">
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option selected>Type of user</option>
-              <option name="role" value="client">Client</option>
-              <option name="role" value="personalTrainer">Personal Trainer</option>
-            </select>
-                </div>
-            <div class="col">
-            <input class="form-control" type="password" name="password" placeholder="Password">
+              <div class="col">
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option selected>Type of user</option>
+                  <option name="role" value="client">Client</option>
+                  <option name="role" value="personalTrainer">Personal Trainer</option>
+                </select>
+              </div>
+              <div class="col">
+                <input class="form-control" type="password" name="password" placeholder="Password">
+              </div>
+            </div>
           </div>
-          </div>
-          </div>
-
-
-              <button class="btn btn-lg btn-block">Sign Up</button>
-
-              <p class="card-text pt-3"><small class="text-muted">Already a member? <a href="/">Sign
-                    in</a></small></p>
+          <button class="btn btn-lg btn-block">Sign Up</button>
+          <p class="card-text pt-3"><small class="text-muted">Already a member? <a href="/">Sign
+                in</a></small></p>
         </form>
-
-
       </div>
     </div>
   </div>
-
-
 </body>
-
 </html>

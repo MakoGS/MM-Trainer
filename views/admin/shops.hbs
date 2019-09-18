@@ -1,108 +1,87 @@
 <div class="user-header d-flex justify-content-center align-items-center">
   <h1>Shops Management</h1>
 </div>
-
-
-
 <div class="container-fluid py-5 ml-auto">
-
   <div class="col-lg-10 align-self-center m-auto">
     <div class="card text-center form card-form">
       <div class="card-body">
-
-<form method="POST" action="/admin/shops/add" enctype="multipart/form-data">
-        <div class="form-group">
-          <div class="row">
-
-            <div class="col">
-              <input class="form-control" type="email" name="name" placeholder="Shop name">
-              </div>
-
-                <div class="col">
-                  <div class="custom-file">
-                    <input type="file" class="custom-file-input" name="image">
-                    <label class="custom-file-label" for="customFile">Shop Image</label>
-                </div>
-                </div>
-
-                <div class="col">
-
-            <select class="form-control" name="city">
-              <option selected>-- City</option>
-          <option value="Porto">Porto</option>
-          <option value="Lisbon">Lisbon</option>
-          <option value="Algarve">Algarve</option>
-            </select>
-                </div>
-
-              </div>
-              </div>
-
-
-              <div class="form-group">
-                <div class="row">
-                                  <div class="col">
-                                                                  <select name="type" class="form-control">
-              <option selected>-- Shop type</option>
-            <option value="Health/Nature Shop">Health/Nature Shop</option>
-            <option value="Sports Nutrition">Sports Nutrition</option>
-            <option value="Meal prepared delivery">Meal prepared delivery</option>
-            </select>
-                </div>
-                <div class="col">
-                     <input class="form-control" type="email" name="address" placeholder="Address">
-                </div>
-            
-              </div>
-              </div>
-
+        <form method="POST" action="/admin/shops/add" enctype="multipart/form-data">
           <div class="form-group">
             <div class="row">
-            <div class="col">
-<input class="form-control" type="email" name="email" placeholder="E-mail">
+              <div class="col">
+                <input class="form-control" type="email" name="name" placeholder="Shop name">
+              </div>
+              <div class="col">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" name="image">
+                  <label class="custom-file-label" for="customFile">Shop Image</label>
                 </div>
-            <div class="col">
-<input class="form-control" type="phone" name="email" placeholder="Phone">
-                </div>
-            <div class="col">
-<input class="form-control" type="website" name="email" placeholder="Website">
-                </div>
+              </div>
+
+              <div class="col">
+
+                <select class="form-control" name="city">
+                  <option selected>-- City</option>
+                  <option value="Porto">Porto</option>
+                  <option value="Lisbon">Lisbon</option>
+                  <option value="Algarve">Algarve</option>
+                </select>
+              </div>
+            </div>
           </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <select name="type" class="form-control">
+                  <option selected>-- Shop type</option>
+                  <option value="Health/Nature Shop">Health/Nature Shop</option>
+                  <option value="Sports Nutrition">Sports Nutrition</option>
+                  <option value="Meal prepared delivery">Meal prepared delivery</option>
+                </select>
+              </div>
+              <div class="col">
+                <input class="form-control" type="email" name="address" placeholder="Address">
+              </div>
+            </div>
           </div>
-
-
-              <button class="btn btn-lg btn-success btn-block">Add a shop</button>
-
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <input class="form-control" type="email" name="email" placeholder="E-mail">
+              </div>
+              <div class="col">
+                <input class="form-control" type="phone" name="email" placeholder="Phone">
+              </div>
+              <div class="col">
+                <input class="form-control" type="website" name="email" placeholder="Website">
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-lg btn-success btn-block">Add a shop</button>
         </form>
-
-
       </div>
     </div>
   </div>
-  </div>
-
+</div>
 <div class="list">
   <div class="cards-container">
     {{#each allShops}}
     <div class="card" style="width: 33.333%;">
       <a href="/admin/shops/edit/{{this._id}}">
-      <img class="img-fluid img-thumbnail" src="{{this.image}}" alt="Card image cap">
+        <img class="img-fluid img-thumbnail" src="{{this.image}}" alt="Card image cap">
       </a>
       <div class="card-body">
         <h5 class="card-title">{{this.name}}<br>
-                        Type: {{this.type}}<br>
-                        Location: {{this.location.city}}<br>
-                        Contact: {{this.contact.email}}<br>
-                        {{this.contact.website}}</h5>
-                                  <form method="POST" class="ml-auto" action="shops/delete/{{this._id}}">
-        <button class="btn btn-danger">Remove Store</button>
-      </form>
+          Type: {{this.type}}<br>
+          Location: {{this.location.city}}<br>
+          Contact: {{this.contact.email}}<br>
+          {{this.contact.website}}</h5>
+        <form method="POST" class="ml-auto" action="shops/delete/{{this._id}}">
+          <button class="btn btn-danger">Remove Store</button>
+        </form>
       </div>
-    </div>      
-
+    </div>
     {{/each}}
   </div>
 </div>
 </div>
-
-

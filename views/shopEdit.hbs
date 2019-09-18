@@ -1,82 +1,63 @@
 <div class="user-header d-flex justify-content-center align-items-center">
   <h1> Editting Shop: {{shop.name}}</h1>
 </div>
-
-
-
 <div class="container-fluid py-5 ml-auto">
-
   <div class="col-lg-10 align-self-center m-auto">
     <div class="card text-center form card-form">
       <div class="card-body">
-
-<form method="POST" action="/shops/edit" enctype="multipart/form-data">
-        <div class="form-group">
-          <div class="row">
-
-            <div class="col">
-              <input class="form-control" type="email" name="name" value={{shop.name}}>
-              </div>
-
-                <div class="col">
-                  <div class="custom-file">
-                    <input type="file" class="custom-file-input" name="image">
-                    <label class="custom-file-label" for="customFile">Shop Image</label>
-                </div>
-                </div>
-
-                <div class="col">
-
-            <select class="form-control" name="city" value={{shop.city}}>
-              <option selected>-- City</option>
-          <option value="Porto">Porto</option>
-          <option value="Lisbon">Lisbon</option>
-          <option value="Algarve">Algarve</option>
-            </select>
-                </div>
-
-              </div>
-              </div>
-
-
-              <div class="form-group">
-                <div class="row">
-                                  <div class="col">
-                                            <select name="type" class="form-control" value={{shop.type}}>
-              <option selected>-- Shop type</option>
-            <option value="Health/Nature Shop">Health/Nature Shop</option>
-            <option value="Sports Nutrition">Sports Nutrition</option>
-            <option value="Meal prepared delivery">Meal prepared delivery</option>
-            </select>
-                </div>
-                <div class="col">
-                     <input class="form-control" type="email" name="address" value={{shop.address}}>
-                </div>
-            
-              </div>
-              </div>
-
+        <form method="POST" action="/shops/edit" enctype="multipart/form-data">
           <div class="form-group">
             <div class="row">
-            <div class="col">
-<input class="form-control" type="email" name="email" value={{shop.email}}>
+              <div class="col">
+                <input class="form-control" type="email" name="name" value={{shop.name}}>
+              </div>
+              <div class="col">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" name="image">
+                  <label class="custom-file-label" for="customFile">Shop Image</label>
                 </div>
-            <div class="col">
-<input class="form-control" type="phone" name="email" value={{shop.phone}}>
-                </div>
-            <div class="col">
-<input class="form-control" type="website" name="email" value={{shop.website}}>
-                </div>
+              </div>
+              <div class="col">
+                <select class="form-control" name="city" value={{shop.city}}>
+                  <option selected>-- City</option>
+                  <option value="Porto">Porto</option>
+                  <option value="Lisbon">Lisbon</option>
+                  <option value="Algarve">Algarve</option>
+                </select>
+              </div>
+            </div>
           </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <select name="type" class="form-control" value={{shop.type}}>
+                  <option selected>-- Shop type</option>
+                  <option value="Health/Nature Shop">Health/Nature Shop</option>
+                  <option value="Sports Nutrition">Sports Nutrition</option>
+                  <option value="Meal prepared delivery">Meal prepared delivery</option>
+                </select>
+              </div>
+              <div class="col">
+                <input class="form-control" type="email" name="address" value={{shop.address}}>
+              </div>
+            </div>
           </div>
-
-
-              <button class="btn btn-lg btn-success btn-block">Add a shop</button>
-
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <input class="form-control" type="email" name="email" value={{shop.email}}>
+              </div>
+              <div class="col">
+                <input class="form-control" type="phone" name="email" value={{shop.phone}}>
+              </div>
+              <div class="col">
+                <input class="form-control" type="website" name="email" value={{shop.website}}>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-lg btn-success btn-block">Add a shop</button>
         </form>
-
-
       </div>
     </div>
   </div>
-  </div>
+</div>
