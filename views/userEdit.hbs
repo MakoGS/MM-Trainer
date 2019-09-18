@@ -8,12 +8,12 @@
     <div class="card text-center form card-form">
       <div class="card-body">
 
-        <form method="POST" action="/login">
+        <form method="POST" action="/login" enctype="multipart/form-data">
         <div class="form-group">
           <div class="row">
 
             <div class="col">
-              <input class="form-control" type="email" name="name" placeholder="Full name">
+              <input class="form-control" type="email" name="name" value={{user.name}}>
               </div>
 
                 <div class="col">
@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="col">
-                  <input class="form-control" type="date" name="dateOfBirth" placeholder="Date of birth">
+                  <input class="form-control" type="date" name="dateOfBirth" value={{user.dateOfBirth}}>
                 </div>
 
               </div>
@@ -34,31 +34,25 @@
               <div class="form-group">
                 <div class="row">
                                   <div class="col">
-            <select class="form-control" id="exampleFormControlSelect1">
+            <select class="form-control" value={{user.genre}}>
               <option selected>-- Genre</option>
               <option name="genre" value="male">Male</option>
               <option name="genre" value="female">Female</option>
             </select>
                 </div>
                 <div class="col">
-            <select class="form-control" id="exampleFormControlSelect1">
+            <select class="form-control" value={{user.location}}>
               <option selected>-- Choose location</option>
               <option name="location" value="lisboa">Lisboa</option>
               <option name="location" value="oporto">Oporto</option>
             </select>
                 </div>
                 <div class="col">
-                     <input class="form-control" type="email" name="email" placeholder="Email">
+                     <input class="form-control" type="email" name="email" value={{user.email}}>
                 </div>
             
               </div>
               </div>
-
-          
-          
-          
-
-
 
           <div class="form-group">
             <div class="row">
@@ -94,21 +88,19 @@
             </div>
           </div>
           <div class="form-group">            
-            <textarea class="form-control" name="description" rows="3" placeholder="Profile description..."></textarea>
+            <textarea class="form-control" name="description" rows="3" value={{user.description}}>
+            </textarea>
           </div>
 
           <div class="form-group">
             <div class="row">
             <div class="col">
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option selected>Type of user</option>
+            <select class="form-control" value={{user.role}}>
+              <option selected>-- Type of user</option>
               <option name="role" value="client">Client</option>
               <option name="role" value="personalTrainer">Personal Trainer</option>
             </select>
                 </div>
-            <div class="col">
-            <input class="form-control" type="password" name="password" placeholder="Password">
-          </div>
           </div>
           </div>
 
