@@ -1,6 +1,7 @@
 <h1>Sending message to {{shop.name}}</h1>
 
 <form action="/shops/message" method="POST">
+  <input type="hidden" name="shopName" value="{{shop.name}}" />
   <label for="">Email</label>
   <input type="email" name="email" id="">
   <label for="">Subject</label>

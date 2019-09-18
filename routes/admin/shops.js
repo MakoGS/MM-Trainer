@@ -64,7 +64,7 @@ router.post('/shops/edit', (req, res, next) => {
       })
   .then(shop => {
     res.render('shopEdit', { shop });
-    res.redirect('/admin/shops')
+    res.redirect('/admin/shops');
   })
   .catch(err => console.log(err));
 });
