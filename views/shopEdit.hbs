@@ -18,8 +18,8 @@
                 </div>
               </div>
               <div class="col">
-                <select class="form-control" name="city" value={{shop.city}}>
-                  <option selected>-- City</option>
+                <select class="form-control" name="city" value={{shop.location.city}}>
+                  <option selected>- City</option>
                   <option value="Porto">Porto</option>
                   <option value="Lisbon">Lisbon</option>
                   <option value="Algarve">Algarve</option>
@@ -31,27 +31,27 @@
             <div class="row">
               <div class="col">
                 <select name="type" class="form-control" value={{shop.type}}>
-                  <option selected>-- Shop type</option>
+                  <option selected>- Shop type</option>
                   <option value="Health/Nature Shop">Health/Nature Shop</option>
                   <option value="Sports Nutrition">Sports Nutrition</option>
                   <option value="Meal prepared delivery">Meal prepared delivery</option>
                 </select>
               </div>
               <div class="col">
-                <input class="form-control" type="email" name="address" value={{shop.address}}>
+                <input class="form-control" type="email" name="address" value={{shop.location.address}}>
               </div>
             </div>
           </div>
           <div class="form-group">
             <div class="row">
               <div class="col">
-                <input class="form-control" type="email" name="email" value={{shop.email}}>
+                <input class="form-control" type="email" name="email" value={{shop.contact.email}}>
               </div>
               <div class="col">
-                <input class="form-control" type="phone" name="email" value={{shop.phone}}>
+                <input class="form-control" type="phone" name="email" value={{shop.contact.phone}}>
               </div>
               <div class="col">
-                <input class="form-control" type="website" name="email" value={{shop.website}}>
+                <input class="form-control" type="website" name="email" value={{shop.contact.website}}>
               </div>
             </div>
           </div>

@@ -21,3 +21,7 @@ color: #6e9673
 
 .form { background-color: rgba(255, 255, 255, 0.8); }
 .description { color: #fff; }
+
+.homepage h1, p{
+  color: gainsboro
+}
