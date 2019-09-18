@@ -1,42 +1,45 @@
 body {
   margin: 0;
-  padding: 50px;
+  padding: 0px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 a {
-  color: #00b7ff; }
+  color: #6e9673; }
 
-  .cards-container {
-    display: flex;
-    padding: 10% 10%;
-    justify-content: space-around;
-  }
-  
- 
-  .cards-container img {
-    display: flex;
-    margin:auto;
-    border-style: none;
-    /* height: 100%; */
-    width: 100%;
-    object-fit: cover;
-    height: 18vw;
-    border-radius: 25px;
-  }
+nav {
+  text-decoration-color: white;
+  color: white;
+  background-color: #6e9673; }
 
-  .footer{
-    display: flex;
-    align-content: center;
-    justify-content: space-around;
-    color: dimgray;
-  }
+a {
+  color: #6e9673; }
 
-  .footer a:visited{
-    /* text-decoration: none; */
-    color: dimgray;
-  }
+.cards-container {
+  display: flex;
+  padding: 10% 10%;
+  justify-content: space-around; }
 
-  .footer a:hover{
-    color: black;
-  }
+.cards-container img {
+  display: flex;
+  margin: auto;
+  border-style: none;
+  /* height: 100%; */
+  width: 100%;
+  object-fit: cover;
+  height: 18vw;
+  border-radius: 25px; }
 
+.footer {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  color: dimgray; }
+
+.footer a:visited {
+  /* text-decoration: none; */
+  color: dimgray; }
+
+.footer a:hover {
+  color: black; }
+
+/*# sourceMappingURL=style.css.map */
