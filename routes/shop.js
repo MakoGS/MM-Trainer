@@ -17,5 +17,9 @@ router.get('/shops', (req, res, next) => {
   .catch(err => console.log(err));
 });
 
+router.get('/shops/message', (req,res, next)=>{
+  res.render('message');
+});
+
 
 module.exports = router;
