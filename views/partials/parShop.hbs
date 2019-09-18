@@ -2,14 +2,13 @@
   <img class="img-fluid img-thumbnail" src="{{this.image}}" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">{{this.name}}<br>
-                     Type: {{this.type}}<br>
-                     Location: {{this.location.city}}<br>
-                     Contact: {{this.contact.email}}<br>
-                     {{this.contact.website}}</h5>
+      Type: {{this.type}}<br>
+      Location: {{this.location.city}}<br>
+      Contact: {{this.contact.email}}<br>
+      {{this.contact.website}}</h5>
   </div>
   <div class="card-footer footer">
     <a href="http://{{this.contact.website}}" target="_blank"> <i class="fas fa-globe fa-2x"></i></a>
     <a href="/shops/message/{{this._id}}"><i class="fas fa-envelope fa-2x"></i></a>
   </div>
 </div>
-

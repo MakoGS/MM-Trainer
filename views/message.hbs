@@ -1,4 +1,4 @@
-<h1>Sending message to {{shop.name}}</h1>
+{{!-- <h1>Sending message to {{shop.name}}</h1>
 
 <form action="/shops/message" method="POST">
   <input type="hidden" name="shopName" value="{{shop.name}}" />
@@ -9,4 +9,36 @@
   <label for="">Message</label>
   <textarea type="text" name="message" id=""></textarea>
   <button type="submit">Submit</button>
-</form>
+</form> --}}
+{{!-- ============================================================================================= --}}
+<div class="user-header d-flex justify-content-center align-items-center">
+  <h1>Sending message to {{shop.name}}</h1>
+</div>
+<div class="container-fluid py-5 ml-auto">
+  <div class="col-lg-10 align-self-center m-auto">
+    <div class="card text-center form card-form">
+      <div class="card-body">
+        <form method="POST" action="/shops/message">
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <input class="form-control" type="text" name="name" placeholder="Full name">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <input class="form-control" type="email" name="email" placeholder="Your e-mail">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="description" rows="3" placeholder="Your message..."></textarea>
+          </div>
+          <button class="btn btn-lg btn-success btn-block">Send message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
