@@ -1,30 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/styles/homepage.css" />
   <title>Document</title>
 </head>
+
 <body>
 
-<form method="POST" action="/login">
-  <div class="form-group">
-    <label for="sign-up-email">Email</label>
-    <input type="email" name="email" placeholder="Your Email">
-  </div>
-  <div class="form-group">
-    <label for="sign-up-password">Password</label>
-    <input type="password" name="password" placeholder="A Safe Password">
-  </div>
-  <button>Sign In</button>
-</form>
+<div class="container homepage">
+        <div class="row d-flex">
+          <div class="col-lg-6 description">
+<h1>M&M Trainer</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 
-
-        <p class="card-text pt-3"><small class="text-muted">Not a member? <a class="hushlink-link" href="/sign-up">Sign up</a></small></p>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
-    </div>
-    </div>
+
+          <div class="col-lg-6 align-self-center">
+            <div class="card text-center form card-form">
+              <div class="card-body">
+
+      <form method="POST" action="/login">
+        <div class="form-group">          
+          <input class="form-control" type="email" name="email" placeholder="Email">
+        </div>
+        <div class="form-group">          
+          <input class="form-control" for="sign-up-password" type="password" name="password" placeholder="Password">
+        </div>
+        <button class="btn btn-lg btn-block">Sign In</button>
+
+              <p class="card-text pt-3"><small class="text-muted">Not a member? <a href="/sign-up">Sign
+            up</a></small></p>
+      </form>
+
+             </div>
+            </div>
+          </div>
+        </div>
+    
 
 </body>
+
 </html>
