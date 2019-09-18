@@ -1,14 +1,58 @@
-<h1>User Profile</h1>
-<p>{{user.name}}</p>
-<p>{{user.email}}</p>
-<p>{{user.dateOfBirth}}</p>
-<p>{{user.genre}}</p>
-<p>{{user.skills}}</p>
-<p>{{user.description}}</p>
-<p>{{user.location}}</p>
-<p>{{user.image}}</p>
-<p>{{user.role}}</p>
-<a href="user/edit">Edit profile</a>
-<form method="POST" action="user/delete/">
-  <button>Delete</button>
+<div class="user-header d-flex justify-content-center align-items-center">
+  <h1>Your profile</h1>
+</div>
+
+<div class="container-fluid pt-5">
+ 
+  <div class="card border-success mb-3">
+  <div class="card-header"><h5 class="card-title text-success">{{user.name}}</h5></div>
+  <div class="card-body">
+<div class="row">
+  <div class="col-3">
+          <img
+        src="https://scontent.flis5-1.fna.fbcdn.net/v/t1.0-9/16196015_10154888128487744_6901111466535510271_n.png?_nc_cat=103&_nc_oc=AQnadaOu1puTaj_-WlB6EYToatHAMb1V8b-gj-v1Cq944AnzcWjXTolAox0jKrMTebo&_nc_ht=scontent.flis5-1.fna&oh=12a83278b89fdb0809efa587df681eb0&oe=5E09A8E9"
+        width="200" height="200" />
+  </div>
+  <div class="col-9">
+
+      <div class="row">
+        <div class="col m-2">
+          <p class="card-text"><u>Email:</u> {{user.email}}</p>
+        </div>
+        <div class="col m-2">
+          <p class="card-text"><u>Genre:</u> {{user.genre}}</p>
+        </div>
+        <div class="col m-2">
+          <p class="card-text"><u>Interests:</u> {{user.skills}}</p>
+        </div>
+        <div class="col m-2">
+          <p><u>Location:</u> {{user.location}}</p>
+        </div>
+      </div>
+        <p class="card-text"><u>Description:</u></p><p>{{user.description}}</p>
+              <div class="row">
+        <div class="col-2 ml-auto">
+          
+                        <form method="GET" action="user/edit/">
+    <button class="btn btn-light">Edit profile</button>
+    </form>
+
+    </div>
+        <div class="col-2">
+
+              <form method="POST" action="user/delete/">
+    <button class="btn btn-danger">Delete</button>
   </form>
+
+    </div>
+    </div>
+  </div>
+</div>
+
+ 
+  </div>
+</div>
+    </div>
+  
+
+</div>
