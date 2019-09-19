@@ -41,15 +41,27 @@ a:hover {
 nav {
   background-color: #6e9673; }
 
-.user-header {
-  background-image: url("./../images/user.png");
+.pt-header {
+    background-image: url("./../../images/pt.png");        
+  }
+.shops-header {
+    background-image: url("./../../images/shops.png");        
+  }
+.users-header {
+    background-image: url("./../../images/users.png");        
+  }
+.profile-header {
+    background-image: url("./../../images/profile.png");        
+  }
+
+.bg-header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 200px; }
 
-.user-header h1 {
+.bg-header h1 {
   color: white; }
 
 .cards-container {
