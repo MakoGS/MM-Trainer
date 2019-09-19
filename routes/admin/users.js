@@ -23,7 +23,7 @@ router.post('/users/delete/:userId', (req, res, next) => {
   User.findByIdAndDelete(req.params.userId)
   .then(user => {
     console.log( `${user} was deleted.`);
-    res.redirect('/');
+    res.redirect('/admin/users');
 })
   .catch(err => console.log(err));
 });
