@@ -3,6 +3,7 @@
 const { Router } = require('express');
 const router = Router();
 const User = require('./../models/user');
+const upload = require('./../tools/cloudinary');
 
 router.get('/user', (req, res, next) => {
   User.findById(req.user._id)
@@ -10,25 +11,27 @@ router.get('/user', (req, res, next) => {
   .catch(err => console.log(err));
 });
 
-router.get('/user/edit', (req, res, next) => {
+router.get('/user/edit/', (req, res, next) => {
   User.findById(req.user._id)
   .then(user => res.render('userEdit', { user }))
   .catch(err => console.log(err));
 });
 
-router.post('/user/edit', (req, res, next) => {
-  User.update({
-    name: req.body.name,  
+router.post('/user/edit/', upload.single('image'), (req, res, next) => {
+  console.log(req.body);
+  User.updateOne({_id: req.user._id}, {
+    name: req.body.name,
+    email:  req.body.email,
     dateOfBirth: req.body.dateOfBirth,
     genre: req.body.genre,
     skills: req.body.skills,
     description: req.body.description,
-    location: req.body.location,
-    role: req.body.role
+    role: req.user.role,
+    image: req.file.url,
+    location: req.body.location
   })
   .then(user => {
-    res.render('userEdit', { user });
-    res.redirect('/user')
+    res.redirect('/user');
   })
   .catch(err => console.log(err));
 });

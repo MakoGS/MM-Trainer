@@ -12,7 +12,6 @@ const MongoStore = require('connect-mongo')(expressSession);
 const mongoose = require('mongoose');
 const passport = require('passport');
 const hbs     = require('hbs');
-
 const indexRouter = require('./routes/index');
 const authRouter = require('./routes/auth');
 const shopRouter = require('./routes/shop');
@@ -58,7 +57,7 @@ app.use(passport.session());
 
 
 app.use((req, res, next) => { 
-  // res.locals.user   = req.user;  
+  res.locals.user   = req.user;  
   if (req.user) { 
     res.locals.client = (req.user.role === 'client');
     res.locals.pt     = (req.user.role === 'personalTrainer');

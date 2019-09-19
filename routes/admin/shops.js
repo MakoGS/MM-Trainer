@@ -14,6 +14,7 @@ router.get('/shops', (req, res, next) => {
 });
 
 router.post('/shops/add',upload.single('image'),(req, res, next) => {
+  console.log(req.body)
   Shop.create({
       name: req.body.name,
       location: {
@@ -47,7 +48,7 @@ router.get('/shops/edit/:shopId', (req, res, next) => {
   .catch(err => console.log(err));
 });
 
-router.post('/shops/edit', (req, res, next) => {
+router.post('/shops/edit', upload.single('image'), (req, res, next) => {
   Shop.update({
     name: req.body.name,
       location: {

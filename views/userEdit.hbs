@@ -5,11 +5,11 @@
   <div class="col-lg-10 align-self-center m-auto">
     <div class="card text-center form card-form">
       <div class="card-body">
-        <form method="POST" action="/login" enctype="multipart/form-data">
+        <form method="POST" action="/user/edit/" enctype="multipart/form-data">
           <div class="form-group">
             <div class="row">
               <div class="col">
-                <input class="form-control" type="email" name="name" value={{user.name}}>
+                <input class="form-control" type="text" name="name" value="{{user.name}}">
               </div>
               <div class="col">
                 <div class="custom-file">

@@ -6,7 +6,6 @@ const schema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-    lowercase: true,
     trim: true
   },
   email: {
@@ -17,13 +16,11 @@ const schema = new mongoose.Schema({
     unique: true
   },
   dateOfBirth: {
-    type: Date,
-    required: true,
+    type: Date,    
     trim: true 
   },
   genre: {
-    type: String,
-    required: true,
+    type: String,    
     lowercase: true,
     enum: [ 'female', 'male' ]
   },
@@ -35,14 +32,12 @@ const schema = new mongoose.Schema({
     enum: [ 'nutrition', 'lose weight', 'increase strength', 'hypertrophy', 'performance', 'rehab', 'cutting' ]
   },
   description: {
-    type: String,
-    required: true,
+    type: String,    
     lowercase: true,
     trim: true    
   },
   location: {
-    type: String,
-    required: true,
+    type: String,    
     lowercase: true,
     trim: true  
   },
