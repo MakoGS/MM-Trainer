@@ -5,7 +5,7 @@ const router = Router();
 const User = require('./../../models/user');
 
 router.get('/users', (req, res, next) => {
-  User.find({})
+  User.find({role: 'client'})
   .then(users => res.render('admin/users', {users} ))
   .catch(err => console.log(err));
 });
