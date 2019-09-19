@@ -1,7 +1,38 @@
-<div class="card" style="width: 33.333%;">
+{{!-- <div class="card" style="width: 33.333%;">
   <img class="card-img-top" src="{{this.photo}}" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">{{this.name}}<br>{{this.type}}<br>{{this.location}}<br>{{this.contact}}</h5>
   </div>
 </div>
-{{!-- DEFAULT TEST - SAME USED FOR <<<<<SHOPS>>>>> --}}
+DEFAULT TEST - SAME USED FOR <<<<<SHOPS>>>>> --}}
+
+  <p>Showing Personal Trainers located in: <strong>{{user.location}}</strong> with the following skills:</p>
+{{!-- {{#each user}}
+<p>{{this.skills}}</p>
+{{/each}} --}}
+<br><br><br><br>
+<div class="container-fluid">
+  <div class="form-inline py-5">
+    <form class="m-auto" method="GET" action="/pt/list">
+      <input type="search" class="form-control" name="ptName" placeholder="Search for a personal trainer..." />
+      <button class="btn btn-primary">Search!</button>
+    </form>
+  </div>
+  {{!-- {{#each pts}} --}}
+  <div class="card my-3 mx-auto col-6">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="{{this.image}}" class="card-img" alt="PT photo">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{this.name}}</h5>
+          <p class="card-text">{{this.description}}</p>
+          <p class="card-text"><small class="text-muted">{{this.email}}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{!-- {{/each}} --}}
+
