@@ -1,7 +1,11 @@
-// $font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$link-color: #6e9673;
-
-h1 { color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 65px; font-weight: bold; letter-spacing: 2px; line-height: 1; text-align: center; }
+h1 {
+  color: #111;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 65px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 1;
+  text-align: center; }
 
 h2 {
   color: #111;
@@ -26,16 +30,13 @@ body {
   padding: 0px; }
 
 a {
-  color: white;
-}
+  color: white; }
 
 a:hover {
   color: white;
   font-weight: 500;
   text-decoration: underline;
-  text-decoration-style: solid;
-}
-
+  text-decoration-style: solid; }
 
 nav {
   background-color: #6e9673; }
@@ -57,12 +58,8 @@ nav {
   justify-content: space-around; }
 
 .footer-copyright {
-  color: white;
-}
+  color: white; }
 
-footer i {
-color: $link-color;
-}
 
 .cards-container img {
   display: flex;
@@ -74,14 +71,7 @@ color: $link-color;
   height: 18vw;
   border-radius: 25px; }
 
-.footer {
-  display: flex;
-  align-content: center;
-  justify-content: space-around;
-  color: white; }
-
-  .center i{
-  display: flex;
-  align-content: center;
-  }
 /*# sourceMappingURL=style.css.map */
+.cardFooter i {
+  color: #6e9673;
+  align-content: center; }
