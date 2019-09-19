@@ -29,15 +29,14 @@ body {
   margin: 0;
   padding: 0px; }
 
-.nav-link,
-navbar-brand {
+a {
   color: white; }
 
-.nav-link:hover,
-navbar-brand:hover {
-  text-decoration-color: white;
-  text-decoration-style: solid;
-  text-decoration: underline; }
+a:hover {
+  color: white;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-style: solid; }
 
 nav {
   background-color: #6e9673; }
@@ -68,14 +67,12 @@ nav {
   height: 18vw;
   border-radius: 25px; }
 
-.footer {
-  display: flex;
-  align-content: center;
-  justify-content: space-around;
+.footer-copyright {
   color: white; }
 
-  .center i{
-  display: flex;
-  align-content: center;
-  }
+footer i {
+  color: #6e9673;
+  width: 25px !important;
+  height: 25px !important; }
+
 /*# sourceMappingURL=style.css.map */
