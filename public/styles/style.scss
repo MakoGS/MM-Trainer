@@ -3,17 +3,27 @@ $link-color: #6e9673;
 
 h1 { color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 65px; font-weight: bold; letter-spacing: 2px; line-height: 1; text-align: center; }
 
+h2 {
+  color: #111;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 32px;
+  margin: 0 0 72px;
+  text-align: center; }
 
-h2 { color: #111; font-family: 'Open Sans', sans-serif; font-size: 30px; font-weight: 300; line-height: 32px; margin: 0 0 72px; text-align: center; }
-
-
-p { color: #333333; font-family: 'Helvetica Neue', sans-serif; font-size: 14px; line-height: 24px; margin: 0 0 24px; text-align: justify; text-justify: inter-word; }
+p {
+  color: #333333;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 0 24px;
+  text-align: justify;
+  text-justify: inter-word; }
 
 body {
   margin: 0;
-  padding: 0px;
-  // font-family: $font-sans;
-}
+  padding: 0px; }
 
 a {
   color: white;
@@ -26,9 +36,9 @@ a:hover {
   text-decoration-style: solid;
 }
 
+
 nav {
-  background-color: #6e9673;
-}
+  background-color: #6e9673; }
 
 .user-header {
   background-image: url("./../images/user.png");
@@ -36,30 +46,15 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 200px;
-}
+  height: 200px; }
 
 .user-header h1 {
-  color: white;
-}
+  color: white; }
 
-  .cards-container {
-    display: flex;
-    padding: 10% 10%;
-    justify-content: space-around;
-  }
-  
- 
-  .cards-container img {
-    display: flex;
-    margin:auto;
-    border-style: none;
-    /* height: 100%; */
-    width: 100%;
-    object-fit: cover;
-    height: 18vw;
-    border-radius: 25px;
-  }
+.cards-container {
+  display: flex;
+  padding: 10% 10%;
+  justify-content: space-around; }
 
 .footer-copyright {
   color: white;
@@ -67,6 +62,26 @@ nav {
 
 footer i {
 color: $link-color;
-width: 25px !important;
-height: 25px !important;
 }
+
+.cards-container img {
+  display: flex;
+  margin: auto;
+  border-style: none;
+  /* height: 100%; */
+  width: 100%;
+  object-fit: cover;
+  height: 18vw;
+  border-radius: 25px; }
+
+.footer {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  color: white; }
+
+  .center i{
+  display: flex;
+  align-content: center;
+  }
+/*# sourceMappingURL=style.css.map */
