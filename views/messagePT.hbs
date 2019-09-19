@@ -1,24 +1,12 @@
-{{!-- <h1>Sending message to {{shop.name}}</h1>
-<form action="/shops/message" method="POST">
-  <input type="hidden" name="shopName" value="{{shop.name}}" />
-  <label for="">Email</label>
-  <input type="email" name="email" id="">
-  <label for="">Subject</label>
-  <input type="text" name="subject" id="">
-  <label for="">Message</label>
-  <textarea type="text" name="message" id=""></textarea>
-  <button type="submit">Submit</button>
-</form> --}}
-{{!-- ============================================================================================= --}}
 <div class="user-header d-flex justify-content-center align-items-center">
-  <h1>Sending message to "{{shop.name}}"</h1>
+  <h1>Sending message to "{{PT.name}}"</h1>
 </div>
 <div class="container-fluid py-5 ml-auto">
   <div class="col-lg-10 align-self-center m-auto">
     <div class="card text-center form card-form">
       <div class="card-body">
-        <form method="POST" action="/shops/message">
-          <input type="hidden" name="shopName" value="{{shop.name}}" />
+        <form method="POST" action="/pt/message">
+          <input type="hidden" name="ptName" value="{{PT.name}}" />
           <div class="form-group">
             <div class="row">
               <div class="col">
@@ -37,7 +25,7 @@
             </div>
           </div>
           <div class="form-group">
-            <textarea class="form-control" name="message" rows="3" placeholder="Your message..."></textarea>
+            <textarea class="form-control" name="description" rows="3" placeholder="Your message..."></textarea>
           </div>
           <button class="btn btn-lg btn-success btn-block">Send message</button>
         </form>

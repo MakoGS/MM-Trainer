@@ -74,4 +74,8 @@ nav {
   justify-content: space-around;
   color: white; }
 
+  .center i{
+  display: flex;
+  align-content: center;
+  }
 /*# sourceMappingURL=style.css.map */
