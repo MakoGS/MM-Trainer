@@ -64,7 +64,6 @@ nav {
   height: 250px; }
 
 .bg-header h1 {
-  padding: 15%, 0;
   color: white; }
 
 .cards-container {
@@ -75,7 +74,7 @@ nav {
 .footer-copyright {
   color: white; }
 
-footer i {
+div i {
   color: #6e9673; }
 
 .cards-container img {
@@ -88,9 +87,5 @@ footer i {
   height: 18vw;
   border-radius: 25px; }
 
-/*# sourceMappingURL=style.css.map */
-.cardFooter i {
-  color: #6e9673;
-  align-content: center; }
 
 /*# sourceMappingURL=style.css.map */
