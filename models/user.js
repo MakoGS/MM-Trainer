@@ -27,9 +27,9 @@ const schema = new mongoose.Schema({
   skills: {    
     type: [String],
     required: true,
-    lowercase: true,
+    // lowercase: true,
     sparse: true,
-    enum: [ 'nutrition', 'lose weight', 'increase strength', 'hypertrophy', 'performance', 'rehab', 'cutting' ]
+    enum: [ 'Nutrition', 'Loose weight', 'Increase strength', 'Hypertrophy', 'Performance', 'Rehab', 'Cutting' ]
   },
   description: {
     type: String,    

@@ -8,26 +8,21 @@
     </div>
     <div class="card-body">
       <div class="row">
-        <div class="col-3">
-          <img src="{{user.image}}" width="200" height="200" />
+        <div class="col-2">
+          <br><br><img src="{{user.image}}" width="200" height="200" />
         </div>
-        <div class="col-9">
-          <div class="row">
-            <div class="col m-2">
-              <p class="card-text"><u>Email:</u> {{user.email}}</p>
-            </div>
-            <div class="col m-2">
-              <p class="card-text"><u>Genre:</u> {{user.genre}}</p>
-            </div>
-            <div class="col m-2">
-              <p class="card-text"><u>Interests:</u> {{user.skills}}</p>
-            </div>
-            <div class="col m-2">
-              <p><u>Location:</u> {{user.location}}</p>
-            </div>
+        <div class="col-8">
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item card text"><b>Email: </b>{{user.email}}</li>
+              <li class="list-group-item card text"> <b>Genre: </b>{{user.genre}}</li>
+              <li class="list-group-item card text"> <b>Description: </b>{{user.description}}</li>
+              <ul class="list-group-item card text"><b>Interests:</b>
+                {{#each user.skills}}
+                <li>{{this}}</li>
+                {{/each}}</ul>
+            </ul>
           </div>
-          <p class="card-text"><u>Description:</u></p>
-          <p>{{user.description}}</p>
           <div class="row">
             <div class="col-2 ml-auto">
               <form method="GET" action="/user/edit/">
@@ -44,5 +39,4 @@
       </div>
     </div>
   </div>
-</div>
 </div>
