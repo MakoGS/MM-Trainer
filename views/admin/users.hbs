@@ -4,17 +4,17 @@
 
 <div class="container-fluid">
   <div class="form-inline py-5">
-      <form class="m-auto" method="GET" action="/admin/users/list">
-          <input type="search" class="form-control" name="userName" placeholder="Search for a user..." />
-     <button class="btn btn-primary">Search!</button>
-      </form>
+    <form class="m-auto" method="GET" action="/admin/users/list">
+      <input type="search" class="form-control" name="userName" placeholder="Search for a user..." />
+      <button class="btn btn-primary">Search!</button>
+    </form>
   </div>
 
   {{#each users}}
   <div class="card my-3 mx-auto col-6">
     <div class="row no-gutters">
       <div class="col-md-4">
-        <img src="{{this.image}}" width="200" height="200" class="card-img" alt="...">
+        <br><img src="{{this.image}}" width="200" height="200" class="card-img" alt="...">
       </div>
       <div class="col-md-8">
         <div class="card-body">
@@ -23,12 +23,11 @@
           <p class="card-text"><small class="text-muted">{{this.email}}</small></p>
         </div>
       </div>
-      
-    </div>   
-        <form method="POST" class="py-2 ml-auto" action="users/delete/{{this._id}}">
-    <button class="btn btn-danger">Delete</button>
+
+    </div>
+    <form method="POST" class="py-2 ml-auto" action="users/delete/{{this._id}}">
+      <button class="btn btn-danger">Delete</button>
     </form>
   </div>
+  {{/each}}
 </div>
-
-{{/each}}

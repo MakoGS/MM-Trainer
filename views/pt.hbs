@@ -1,7 +1,8 @@
 <div class="bg-header pt-header">
-  <h1 class="text-center py-5">Personal Trainers</h1></div>
-  
-  <br><br><h2>Showing Personal Trainers located in <strong>{{user.location}}</strong> that matches your interests:</h2>
+  <h1 class="text-center py-5">Personal Trainers</h1>
+</div>
+<br><br>
+<h2>Showing Personal Trainers located in <strong>{{user.location}}</strong> that matches your interests:</h2>
 {{!-- {{#each user}}
 <h2>{{this.skills}}</h2>
 {{/each}} --}}
@@ -13,7 +14,7 @@
     </form>
   </div>
   {{#each pts}}
-    {{!-- {{> parPT this}} --}}
+  {{!-- {{> parPT this}} --}}
   <div class="card my-3 mx-auto col-6">
     <div class="row no-gutters">
       <div class="col-md-4">
@@ -30,7 +31,5 @@
       </div>
     </div>
   </div>
-{{/each}}
+  {{/each}}
 </div>
-
-

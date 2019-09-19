@@ -4,7 +4,7 @@
 
 <div class="container-fluid">
   <div class="form-inline py-5">
-      <form class="m-auto" method="POST" action="/admin/pt/list">
+      <form class="m-auto" method="GET" action="/admin/pt/list">
           <input type="search" class="form-control" name="ptName" placeholder="Search for a personal trainer..." />
      <button class="btn btn-primary">Search!</button>
       </form>
@@ -30,5 +30,5 @@
     <button class="btn btn-danger">Delete</button>
     </form>
   </div>
-</div>
 {{/each}}
+</div>
