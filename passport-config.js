@@ -41,13 +41,13 @@ passport.use('sign-up', new PassportLocalStrategy({ usernameField: 'email', pass
     req.body.skills,
     req.body.description,
     req.body.location,
-    req.file.url,
+    req.body.image,
     req.body.role
   )
-    .then(user => {
-      callback(null, user);
-    })
-    .catch(err => {
-      callback(err);
-    });
+  .then(user => {
+    callback(null, user);
+  })
+  .catch(err => {
+    callback(err);
+  });
 }));

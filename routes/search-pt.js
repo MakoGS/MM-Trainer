@@ -3,8 +3,9 @@
 const { Router } = require('express');
 const router = Router();
 const User = require('./../models/user');
+const { ensureLoggedIn } = require('connect-ensure-login');
 
-router.get('/search-pt', (req, res, next) => {
+router.get('/search-pt', ensureLoggedIn('/'), (req, res, next) => {
   User.find({
     role: 'personalTrainer',
     skills: {$regex : `${ req.user.skills }`},

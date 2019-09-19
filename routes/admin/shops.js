@@ -37,7 +37,7 @@ router.post('/shops/delete/:shopId', (req, res, next) => {
   Shop.findByIdAndDelete(req.params.shopId)
   .then(shop => {
     console.log( `${shop} was deleted.`);
-    res.redirect('/');
+    res.redirect('/admin/shops');
 })
   .catch(err => console.log(err));
 });
@@ -64,7 +64,6 @@ router.post('/shops/edit', upload.single('image'), (req, res, next) => {
       image: req.file.url
       })
   .then(shop => {
-    res.render('shopEdit', { shop });
     res.redirect('/admin/shops');
   })
   .catch(err => console.log(err));

@@ -10,7 +10,7 @@ router.get('/pt', (req, res, next) => {
   .catch(err => console.log(err));
 });
 
-router.get('/pt/list', (req, res, next) => {
+router.post('/pt/list', (req, res, next) => {
   User.find({
     role: 'personalTrainer',
     name: {$regex : `${ req.query.ptName }`}

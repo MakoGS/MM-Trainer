@@ -6,13 +6,14 @@ const {
 const router = Router();
 const Shop = require('./../models/shop');
 const nodemailer = require('nodemailer');
+const { ensureLoggedIn } = require('connect-ensure-login');
 
 
 // router.get('/shops', (req, res, next) => {
 //   res.render('shops');
 // });
 
-router.get('/shops', (req, res, next) => {
+router.get('/shops', ensureLoggedIn('/'), (req, res, next) => {
   Shop.find({})
     .then(allShops => {
       res.render('shops', {
@@ -22,17 +23,17 @@ router.get('/shops', (req, res, next) => {
     .catch(err => console.log(err));
 });
 
-router.get('/shops/message', (req, res, next) => {
+router.get('/shops/message', ensureLoggedIn('/'), (req, res, next) => {
   res.render('message');
 });
 
-router.get('/shops/message/:shopId', (req, res, next) => {
+router.get('/shops/message/:shopId', ensureLoggedIn('/'), (req, res, next) => {
   Shop.findById(req.params.shopId)
     .then(shop => res.render('message', {shop}))
     .catch(err => console.log(err));
 });
 
-router.post('/shops/message/', (req, res, next) => {
+router.post('/shops/message/', ensureLoggedIn('/'), (req, res, next) => {
 
   const transporter=nodemailer.createTransport({
     service: 'Gmail',

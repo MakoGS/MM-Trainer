@@ -43,7 +43,9 @@ const schema = new mongoose.Schema({
   },
   image: {
     type: String,    
-    trim: true 
+    trim: true,
+    required: true,
+    default: './../images/profile.png'
   },
   role: {
     type: String,

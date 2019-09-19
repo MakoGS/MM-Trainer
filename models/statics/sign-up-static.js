@@ -11,7 +11,7 @@ module.exports = function(
   skills, 
   description, 
   location, 
-  image, 
+  image,
   role
 ) {
   
@@ -27,7 +27,7 @@ module.exports = function(
         skills,
         description,
         location,
-        image,
+        image,        
         role,
         passwordHash: hash
       });
