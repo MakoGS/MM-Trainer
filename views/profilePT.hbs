@@ -1,18 +1,21 @@
 <h1>{{PT.name}}'s Profile</h1>
 <div class="card my-3 mx-auto col-6">
   <div class="row no-gutters">
-    <div class="col-md-4">
+    <div class="col-md-4 center"><br><br><br>
       <img src="{{PT.image}}" class="card-img" alt="...">
+      <br><br><a href="/pt/message/{{PT._id}}"><i class="fas fa-envelope fa-2x footer"></i></a>
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">{{PT.name}}</h5>
-        <p class="card-text">{{PT.location}}</p>
-        <p class="card-text">{{PT.description}}</p>
-        <p class="card-text">My Skills:
-          {{#each PT.skills}}
-            <p>{{this}}</p>
-          {{/each}}</p>
-        <p class="card-text"><small class="text-muted">{{PT.email}}</small></p>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item card text"><b>Name: </b>{{PT.name}}</li>
+          <li class="list-group-item card text"> <b>Location: </b>{{PT.location}}</li>
+          <li class="list-group-item card text"><b>Description: </b>{{PT.description}}</li>
+          <ul class="list-group-item card text"><b>Skills:</b>
+            {{#each PT.skills}}
+            <li>{{this}}</li>
+            {{/each}}</ul>
+          <li class="list-group-item card text"><small class="text-muted"><b>Email:</b>{{PT.email}}</small></li>
+        </ul>
       </div>
     </div>

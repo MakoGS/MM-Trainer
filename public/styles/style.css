@@ -76,4 +76,8 @@ nav {
 .footer a:hover {
   color: black; }
 
+  .center i{
+  display: flex;
+  align-content: center;
+  }
 /*# sourceMappingURL=style.css.map */
