@@ -14,16 +14,18 @@ body {
   // font-family: $font-sans;
 }
 
-nav a {
+.nav-link,
+navbar-brand {
   color: white;
 }
-nav a:hover {
+.nav-link:hover,
+navbar-brand:hover {
+  text-decoration-color: white;
+  text-decoration-style: solid;
   text-decoration: underline;
 }
 
 nav {
-  text-decoration-style: none;
-  color: white;
   background-color: #6e9673;
 }
 
@@ -62,14 +64,5 @@ nav {
     display: flex;
     align-content: center;
     justify-content: space-around;
-    color: dimgray;
-  }
-
-  .footer a:visited{
-    /* text-decoration: none; */
-    color: dimgray;
-  }
-
-  .footer a:hover{
-    color: black;
+    color:white;
   }

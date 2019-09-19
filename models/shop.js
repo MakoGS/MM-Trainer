@@ -44,9 +44,10 @@ const schema = new mongoose.Schema({
     }
     },
     image: {
-      type: String,
-      lowercase: true,
-      trim: true    
+      type: String,    
+      trim: true,
+      required: true,
+      default: './../images/shop.png'  
     }
 });
 

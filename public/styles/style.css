@@ -3,7 +3,7 @@ h1 {
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 65px;
   font-weight: bold;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   line-height: 1;
   text-align: center; }
 
@@ -29,12 +29,17 @@ body {
   margin: 0;
   padding: 0px; }
 
-nav a {
+.nav-link,
+navbar-brand {
   color: white; }
 
+.nav-link:hover,
+navbar-brand:hover {
+  text-decoration-color: white;
+  text-decoration-style: solid;
+  text-decoration: underline; }
+
 nav {
-  text-decoration-style: none;
-  color: white;
   background-color: #6e9673; }
 
 .user-header {
@@ -67,13 +72,6 @@ nav {
   display: flex;
   align-content: center;
   justify-content: space-around;
-  color: dimgray; }
-
-.footer a:visited {
-  /* text-decoration: none; */
-  color: dimgray; }
-
-.footer a:hover {
-  color: black; }
+  color: white; }
 
 /*# sourceMappingURL=style.css.map */
