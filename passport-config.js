@@ -41,7 +41,7 @@ passport.use('sign-up', new PassportLocalStrategy({ usernameField: 'email', pass
     req.body.skills,
     req.body.description,
     req.body.location,
-    req.body.image,
+    req.file.url,
     req.body.role
   )
   .then(user => {
