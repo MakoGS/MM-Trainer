@@ -57,6 +57,12 @@ nav {
   padding: 10% 10%;
   justify-content: space-around; }
 
+.footer-copyright {
+  color: white; }
+
+footer i {
+  color: #6e9673; }
+
 .cards-container img {
   display: flex;
   margin: auto;
@@ -67,12 +73,16 @@ nav {
   height: 18vw;
   border-radius: 25px; }
 
-.footer-copyright {
-  color: white; }
+.footer {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  color: #6e9673; }
 
-footer i {
-  color: #6e9673;
-  width: 25px !important;
-  height: 25px !important; }
+.center i {
+  display: flex;
+  align-content: center; }
+
+/*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */
