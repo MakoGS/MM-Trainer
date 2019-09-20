@@ -27,6 +27,9 @@
           <h5 class="card-title">{{this.name}}</h5>
           <p class="card-text">{{this.description}}</p>
           <p class="card-text"><small class="text-muted">{{this.email}}</small></p>
+          <form class="m-auto" method="GET" action="/pt/list/{{this._id}}">
+            <button class="btn corporate-btn">View profile...</button>
+          </form>
         </div>
       </div>
     </div>
