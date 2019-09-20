@@ -20,6 +20,11 @@
         <div class="card-body">
           <h5 class="card-title">{{this.name}}</h5>
           <p class="card-text">{{this.description}}</p>
+          <ul class=""><b>Interests:</b>
+            {{#each this.skills}}
+            <li>{{this}}</li>
+            {{/each}}</ul>
+          </ul>
           <p class="card-text"><small class="text-muted">{{this.email}}</small></p>
         </div>
       </div>
