@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -12,10 +13,12 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/2b806b9c62.js"></script>
 </head>
+
 <body>
   {{#if client}}
   <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="/">M&M Trainer</a>
+    <img src="./../images/logof.jpg" class="rounded " width="90" height="60" alt="">
+    {{!-- <a class="navbar-brand" href="/">M&M Trainer</a> --}}
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link" href="/pt">Personal Trainers</a>
@@ -28,7 +31,9 @@
   {{/if}}
   {{#if pt}}
   <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="/">M&M Trainer</a>
+    <img src="./../images/logof.jpg" class="rounded " width="90" height="60" alt="">
+
+    {{!-- <a class="navbar-brand" href="/">M&M Trainer</a> --}}
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link" href="/shops">Shops</a>
@@ -40,7 +45,8 @@
   {{/if}}
   {{#if admin}}
   <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="/">M&M Trainer</a>
+    <img src="./../images/logof.jpg" class="rounded " width="90" height="60" alt="">
+    {{!-- <a class="navbar-brand" href="/">M&M Trainer</a> --}}
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link" href="/user">My profile</a>
@@ -58,51 +64,52 @@
   </nav>
   {{/if}}
   {{{body}}}
-{{#if user}}
-<footer class="bg-dark pt-4">
-  <!-- Footer Elements -->
-  <div class="container-fluid">
-    <!-- Social buttons -->
-    <ul class="list-unstyled list-inline text-center">
-      <li class="list-inline-item">
-        <a class="btn-floating btn-fb mx-2">
-          <i class="fab fa-facebook-f fa-2x"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-tw mx-2">
-          <i class="fab fa-twitter fa-2x"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-gplus mx-2">
-          <i class="fab fa-google-plus-g fa-2x"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-li mx-2">
-          <i class="fab fa-linkedin-in fa-2x"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-dribbble mx-2">
-          <i class="fab fa-dribbble fa-2x"> </i>
-        </a>
-      </li>
-    </ul>
-    <!-- Social buttons -->
+  {{#if user}}
+  <footer class="bg-dark pt-4">
+    <!-- Footer Elements -->
+    <div class="container-fluid">
+      <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-2">
+            <i class="fab fa-facebook-f fa-2x"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-2">
+            <i class="fab fa-twitter fa-2x"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-gplus mx-2">
+            <i class="fab fa-google-plus-g fa-2x"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-2">
+            <i class="fab fa-linkedin-in fa-2x"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-dribbble mx-2">
+            <i class="fab fa-dribbble fa-2x"> </i>
+          </a>
+        </li>
+      </ul>
+      <!-- Social buttons -->
 
-  </div>
-  <!-- Footer Elements -->
+    </div>
+    <!-- Footer Elements -->
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2019 Copyright:
-    <a href="/"> M&M Trainer </a>
-  </div>
-  <!-- Copyright -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+      <a href="/"> M&M Trainer </a>
+    </div>
+    <!-- Copyright -->
 
-</footer>
-{{/if}}
-<!-- Footer -->
+  </footer>
+  {{/if}}
+  <!-- Footer -->
 </body>
+
 </html>
