@@ -91,7 +91,7 @@ app.use((error, req, res, next) => {
     res.render('404');
   }
   else {
-    res.send(error.message);
+    res.render('error');
 }
 });
 
